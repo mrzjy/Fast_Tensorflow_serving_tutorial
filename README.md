@@ -2,7 +2,7 @@
 This is a fast and simple tutorial on how to apply Tensorflow serving. It covers minimal functionalities to get a tensorflow server-client system working, with 3 steps to follow.
 
 ## Step 1. create a model and export it
-** (Step 1 is actually skippable for I've already done this for you) **
+**(Step 1 is actually skippable for I've already done this for you)**
 In the tf.model.py file, a tensorflow model is implemented that simply does addition operation to two given variables. We would create this model in model_dir, and export it to export_dir by simply running:
 ~~~
 python tf_model.py
@@ -11,7 +11,7 @@ You could quickly test the exported model (load the model locally and feed some 
 ~~~
 python tf_client_local.py
 ~~~
-- **In order to follow the next steps normally: **
+- **In order to follow the next steps normally:**
 Make sure you change the export path to export_dir/1, and there is batchingParameters.proto file present inside it (take a look at the current repo and you'll understand what I'm saying)
 (Again, all this is only necessary if you decide to redo the step 1 yourself, and if so, you may want to clear the export_dir and model_dir first)
 
@@ -56,8 +56,8 @@ Normally, you should see the client inputs and the server outputs printed in the
 
 **Follow-ups**
 - **The server-side batching functionality**
-This is one of the strong and convinient feature of tensorflow-serving, which is enabled by "--enable_batching" command flag. Besides, the batching behaviour could be customized by a "batchingParameters.proto" file.
+This is one of the strong and convinient feature of tensorflow-serving, which is enabled by "--enable_batching" command flag. Besides, the batching behaviour could be customized by a "batchingParameters.proto" file. You may explore this youself (e.g., https://stackoverflow.com/questions/42635873/tensorflow-serving-batching-parameters)
 - **Alternative ways to serve a model**
-There are unlimited ways to serve a model, https://github.com/hanxiao/bert-as-service is one of them using ZeroMQ. Also, if concurrency is not your concern, or you only have CPUs (for which batching brings less concurrency boost), a direct Web Framework (e.g., Tornado) + loading the model locally is quite enough actually.
+There are unlimited ways to serve a model, https://github.com/hanxiao/bert-as-service is one of them using ZeroMQ. Also, if concurrency is not your concern, or you only have CPUs (for which batching brings less concurrency boost), a direct web framework (e.g., Tornado, Flask) + loading the model locally is quite enough actually.
 - **More details**
 Feel free to explore more details, such as https://towardsdatascience.com/using-tensorflow-serving-grpc-38a722451064 
