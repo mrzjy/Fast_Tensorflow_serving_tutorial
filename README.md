@@ -56,7 +56,7 @@ Normally, you should see the client inputs and the server outputs printed in the
 
 **Follow-ups**
 - **The server-side batching functionality**
-This is one of the strong and convinient feature of tensorflow-serving, which is enabled by "--enable_batching" command flag. Besides, the batching behaviour could be customized by a "batchingParameters.proto" file. You may explore this youself (e.g., https://stackoverflow.com/questions/42635873/tensorflow-serving-batching-parameters)
+This is one of the strong and convenient feature of tensorflow-serving, which is enabled by "--enable_batching" command flag. Besides, the batching behaviour could be customized by a "batchingParameters.proto" file. You may explore this youself (e.g., https://stackoverflow.com/questions/42635873/tensorflow-serving-batching-parameters)
 - **Alternative ways to serve a model**
 There are unlimited ways to serve a model, https://github.com/hanxiao/bert-as-service is one of them using ZeroMQ. Also, if concurrency is not your concern, or you only have CPUs (for which batching brings less concurrency boost), a direct web framework (e.g., Tornado, Flask) + loading the model locally is quite enough actually.
 - **More details**
