@@ -9,7 +9,7 @@ import random
 import requests
 import argparse
 parser = argparse.ArgumentParser(description='Tensorflow serving client test')
-parser.add_argument('-url', type=str, default='http://localhost:8501/v1/models/my_model:predict',
+parser.add_argument('-url', type=str, default='http://0.0.0.0:8501/v1/models/my_model:predict',
                     help='url of server that supports RESTFUL')
 args = parser.parse_args()
 
