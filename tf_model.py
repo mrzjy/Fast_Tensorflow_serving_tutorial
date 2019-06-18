@@ -22,7 +22,6 @@ FLAGS = tf.app.flags.FLAGS
 
 class Model:
     """ Model class """
-
     def __init__(self, mode, params):
         """ Initialization"""
         self.mode = mode
@@ -35,11 +34,10 @@ class Model:
 
 class AdditionLayer(tf.layers.Layer):
     """ Model Layer class"""
-
     def __init__(self):
         super(AdditionLayer, self).__init__()
 
-    def __call__(self, x, y, *args, **kwargs):
+    def call(self, x, y, *args, **kwargs):
         return x + y
 
 
