@@ -21,7 +21,7 @@ There are multiple ways to serve the model, in this simple tutorial, however, we
 ### Choice 1: The original way
 The original way is the direct and standard command of tensorflow_model_server, which could be installed as described here: https://www.tensorflow.org/tfx/serving/setup (Section "using APT" or "Build from source")
 
-Once you've successfully installed it, simply run the example code:
+Once you've successfully installed it, simply run the example code and keep it running:
 ~~~
 sh tf_run_server_original_way.sh
 ~~~
@@ -30,14 +30,14 @@ The server will take up two ports (8500 and 8501 by default), the port 8501 supp
 ### Choice 2: The Docker way
 The Docker way is more recommanded because all you need to do is to download the Docker image that already contains everything you need, instead of installing everything yourself just as in the "2.1 The original way". Of course you need to get Docker installed first (https://www.docker.com/).
 
-Once you've get docker functioning, simply run the example code:
+Once you've get docker functioning, simply run the example code and keep it running:
 ~~~
 sh tf_run_server_docker_way.sh
 ~~~
-Basically it's the same outcome as "Choice 1: The original way", except the port usage. Here we applied port mapping: port mapped to 8901 and 8900 in the above code. So the requests that you make later should instead be sent to 8901 or 8900. (To see why we use port mapping for Docker, please refer to https://docs.docker.com/config/containers/container-networking/)
+Basically it's the same outcome as "Choice 1: The original way", except the port usage. Here we applied port mapping: ports 8501 and 8500 are mapped to 8901 and 8900 in the above code. So the requests that you make later should instead be sent to 8901 or 8900. (To see why we use port mapping for Docker, please refer to https://docs.docker.com/config/containers/container-networking/)
 
 ## Step 3. Create the client (Make request to server)
-Once the server is set up normally, it naturally supports 2 ways of how data is accepted and returned, namely the REST and gRPC (You could find a brief introduction/comparison of them at https://code.tutsplus.com/tutorials/rest-vs-grpc-battle-of-the-apis--cms-30711). Hence, there are 2 ways to create the client.
+Once the server is set up normally, it naturally supports 2 ways of how data is accepted and returned, namely the REST and gRPC ways (You could find a brief introduction/comparison of them at https://code.tutsplus.com/tutorials/rest-vs-grpc-battle-of-the-apis--cms-30711). Hence, there are 2 ways to create the client.
 
 ### Choice 1: The REST way
 Basically, the REST way is about sending and receiving data in **JSON** format, simply run:
