@@ -30,7 +30,7 @@ The server will take up two ports (8500 and 8501 by default), the port 8501 supp
 ### Choice 2: The Docker way
 The Docker way is more recommanded because all you need to do is to download the Docker image that already contains everything you need, instead of installing everything yourself just as in the "2.1 The original way". Of course you need to get Docker installed first (https://www.docker.com/).
 
-Once you've get docker functioning, simply run the example code and keep it running:
+Once you've get docker functioning, simply run the example code and keep it running (The first time running will require downloading a tensorflow serving environment first):
 ~~~
 sh tf_run_server_docker_way.sh
 ~~~
